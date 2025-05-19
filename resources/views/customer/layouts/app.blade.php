@@ -21,13 +21,52 @@
 
     <script src="//unpkg.com/alpinejs" defer></script>
 
+
     <style>
     body {
         font-family: 'Oswald', sans-serif !important;
 
     }
-    </style>
 
+    .btn-save {
+        background-color: #05561F;
+        font-weight: 700;
+        font-size: 16px;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .btn-save:hover {
+        background-color: #0a7a2e;
+        color: white;
+    }
+
+    .btn-filter {
+        background-color: #a9141e;
+        font-weight: 700;
+        font-size: 16px;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .btn-filter:hover {
+        background-color: #8D0F16;
+        color: white;
+    }
+
+    .btn-back {
+        background-color: #213448;
+        font-weight: 700;
+        font-size: 16px;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .btn-back:hover {
+        background-color: #273F4F;
+        color: white;
+    }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 

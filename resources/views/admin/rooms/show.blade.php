@@ -44,7 +44,6 @@
             <p class=" capitalize text-2xl font-bold">{{ $room->name }} - {{ $room->floor->name ?? 'N/A' }}</p>
             <div class="flex flex-col gap-2">
                 <p><strong>Loại phòng:</strong> {{ ucfirst($room->type) }}</p>
-                <p><strong>Sức chứa: </strong>( bổ sung sau)</p>
                 <p><strong>Các tiện ích phòng:</strong>
                     @if($room->amenities->count())
                     @php

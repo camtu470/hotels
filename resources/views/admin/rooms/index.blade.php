@@ -158,6 +158,10 @@
                 @endforeach
             </tbody>
         </table>
+        <div class="mt-4">
+            {{ $rooms->links() }}
+        </div>
+
     </div>
 </div>
 @endsection

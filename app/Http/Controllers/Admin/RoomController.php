@@ -40,8 +40,11 @@ class RoomController extends Controller
             $query->where('price_per_night', '<=', $request->price_max);
         }
     
-        $rooms = $query->get();
+        $rooms = $query->paginate(10)->withQueryString();
     
+
+     
+  
         // Gửi thêm danh sách hotels, floors để hiển thị form lọc
         $hotels = Hotel::all();
         $floors = Floor::all();
