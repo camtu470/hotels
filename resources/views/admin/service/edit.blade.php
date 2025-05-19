@@ -1,0 +1,66 @@
+@extends('admin.layouts.app')
+@section('content')
+<div class="w-full flex flex-col gap-4 py-10 px-4">
+    <h2 class="text-5xl font-extrabold text-center text-[#a9141e]">CHỈNH SỬA DỊCH VỤ</h2>
+    <div class="w-1/2 mx-auto border-2 border-[#a9141e]"></div>
+    <form method="POST" action="{{ route('services.update', $service->id) }}"
+        class="flex flex-col gap-6 text-sm text-[#a9141e] font-bold shadow bg-white border border-gray-300 rounded-lg p-6 py-10">
+        @csrf
+        @method('PUT')
+
+        <div class="flex gap-6">
+            <div class="w-1/2 flex flex-col gap-2">
+                <label>Tên dịch vụ</label>
+                <input type="text" name="name" placeholder="Nhập tên dịch vụ" class="form-control p-2"
+                    value="{{ old('name', $service->name) }}">
+            </div>
+
+            <div class="w-1/2 flex flex-col gap-2">
+                <label>Giá</label>
+                <input type="text" id="price_display" placeholder="0" class="form-control p-2" autocomplete="off">
+                <input type="hidden" name="price" id="price" value="{{ old('price', $service->price) }}">
+            </div>
+
+            <script>
+            const priceDisplay = document.getElementById('price_display');
+            const priceHidden = document.getElementById('price');
+
+            // Nếu có giá cũ, hiển thị với format chấm phân cách hàng nghìn
+            if (priceHidden.value) {
+                priceDisplay.value = Number(priceHidden.value).toLocaleString('vi-VN');
+            }
+
+            priceDisplay.addEventListener('input', () => {
+                // Lấy giá trị chỉ số (bỏ hết ký tự không phải số)
+                let rawValue = priceDisplay.value.replace(/[^0-9]/g, '');
+
+                if (rawValue === '') {
+                    priceHidden.value = '';
+                    priceDisplay.value = '';
+                    return;
+                }
+
+                let numberValue = parseInt(rawValue);
+                priceHidden.value = numberValue;
+                priceDisplay.value = numberValue.toLocaleString('vi-VN');
+            });
+            </script>
+        </div>
+
+        <div class="w-full flex flex-col gap-2">
+            <label>Mô tả</label>
+            <textarea name="description" placeholder="Mô tả về dịch vụ"
+                class="form-control p-2">{{ old('description', $service->description) }}</textarea>
+        </div>
+
+        <div class="flex gap-2 ml-auto">
+            <button type="submit" class="btn btn-save">Lưu
+
+            </button>
+            <a href="{{ route('services.index') }}" class="btn btn-back">Trở về</a>
+        </div>
+
+    </form>
+</div>
+
+@endsection
