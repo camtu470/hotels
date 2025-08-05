@@ -76,6 +76,34 @@ Quản lý khách hàng
 
 ### 1. Clone dự án
 
-```bash
-git clone https://github.com/yourusername/quan-ly-khach-san.git
-cd quan-ly-khach-san
+git clone https://github.com/camtu470/hotels.git
+cd hotels
+
+**2. Cài đặt các thư viện backend bằng Composer**
+composer install
+
+### 3. Cài đặt các gói frontend bằng NPM
+npm install
+
+**4. Tạo file cấu hình môi trường và tạo APP_KEY**
+cp .env.example .env
+php artisan key:generate
+
+**5. Mở file .env và chỉnh sửa thông tin kết nối database như sau (nếu dùng XAMPP):**
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=hotels_db
+DB_USERNAME=root
+DB_PASSWORD=
+
+**6. Import database vào XAMPP/phpMyAdmin**
+- Tạo database mới tên là hotels_db
+- Import file db vào
+
+**7. Build giao diện frontend (Vite)**
+php artisan serve
+
+
+
+
