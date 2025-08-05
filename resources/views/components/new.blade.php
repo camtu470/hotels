@@ -1,4 +1,4 @@
-<div class="w-11/12 mx-auto flex flex-col gap-4">
+<div class="w-11/12 mx-auto flex flex-col gap-4 mb-10">
     <h1 class="text-4xl font-bold">BÀI VIẾT</h1>
     <div class="flex gap-4">
         <div class="w-1/2 flex flex-col gap-1 p-4 border rounded shadow">

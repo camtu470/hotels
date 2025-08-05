@@ -1,4 +1,4 @@
-<div class="w-10/12 mx-auto flex gap-4">
+<div class="w-10/12 mx-auto flex gap-4 py-10">
     <div class="w-1/2">
         <img src="https://kksapahotel.com/uploads/images/VQK_2153%20(1).jpg" alt="" class="w-full bg-cover rounded-lg">
     </div>

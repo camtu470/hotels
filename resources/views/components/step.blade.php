@@ -2,7 +2,7 @@
     <h1 class="text-center text-5xl font-bold">HƯỚNG DẪN ĐẶT PHÒNG</h1>
     <p class="text-base font-normal text-center">Chỉ với 4 bước đơn giản để trải nghiệm dịch vụ khách sạn một cách nhanh
         chóng</p>
-    <div class="flex gap-4 mt-4">
+    <div class="w-11/12 mx-auto flex gap-4 mt-4">
         <div class="w-1/4 flex flex-col gap-4 p-4 shadow rounded">
             <img src="../../image/1.png" alt="" class="object-cover">
             <p class="font-bold text-xl"><span class="text-green-600">01</span> Đặt phòng trên app/web
