@@ -99,7 +99,14 @@ DB_PASSWORD=
 
 **6. Import database vào XAMPP/phpMyAdmin**
 - Tạo database mới tên là hotels_db
-- Import file db vào
+- Copy file db tại thư mục database.db
+
+<img width="603" height="293" alt="db" src="https://github.com/user-attachments/assets/755de08f-40c0-4851-8a6a-bdd738ce4f3d" />
+
+- Chọn SQL và dán tất cả vào và chọn thực hiện
+
+<img width="950" height="465" alt="xampp" src="https://github.com/user-attachments/assets/615dd135-423f-4fa8-b712-9e06fb3641ea" />
+
 
 **7. Build giao diện frontend (Vite)**
 php artisan serve
